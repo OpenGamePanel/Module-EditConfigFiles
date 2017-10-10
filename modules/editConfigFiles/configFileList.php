@@ -22,7 +22,7 @@
  *
  */
 
-require_once('modules/editConfigurationFiles/functions.php');
+require_once('modules/editConfigFiles/functions.php');
 require_once("modules/config_games/server_config_parser.php");
 
 function exec_ogp_module()
@@ -73,7 +73,7 @@ function exec_ogp_module()
             echo '<tr>
 					<td>'. $file['name'] .'</td>
 					<td>'. ($file['description'] ?: '<i>'.get_lang('no_description').'</i>') .'</td>
-					<td><a href="?m=editConfigurationFiles&p=modify&home_id='.$server_home['home_id'].'&file='.rawurlencode($file['path']).'">[ '.get_lang('edit').' ]</a></td>
+					<td><a href="?m=editConfigFiles&p=modify&home_id='.$server_home['home_id'].'&file='.rawurlencode($file['path']).'">[ '.get_lang('edit').' ]</a></td>
 				</tr>';
         }
         

@@ -22,7 +22,7 @@
  *
  */
 
-require_once('modules/editConfigurationFiles/functions.php');
+require_once('modules/editConfigFiles/functions.php');
 require_once("modules/config_games/server_config_parser.php");
 require_once('includes/lib_remote.php');
 
@@ -53,7 +53,7 @@ function exec_ogp_module()
     
     if (array_search($file, array_column($files, 'path')) === false) {
         print_failure(get_lang('invalid_file'));
-        $view->refresh("?m=editConfigurationFiles&home_id=". (int)$server_home['home_id']);
+        $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
         
         return;
     }
@@ -73,12 +73,12 @@ function exec_ogp_module()
             
             if ($file_info === 1) {
                 print_success(get_lang('wrote_changes'));
-                $view->refresh("?m=editConfigurationFiles&home_id=". (int)$server_home['home_id']);
+                $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
                 
                 return;
             } else {
                 print_failure(get_lang('failed_write'));
-                $view->refresh("?m=editConfigurationFiles&home_id=". (int)$server_home['home_id']);
+                $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
                 
                 return;
             }
@@ -87,24 +87,24 @@ function exec_ogp_module()
         
             if ($file_info === 0) {
                 print_failure(get_lang('file_not_found'));
-                $view->refresh("?m=editConfigurationFiles");
+                $view->refresh("?m=editConfigFiles");
                 
                 return;
             } elseif ($file_info === -2) {
                 print_failure(get_lang('failed_read'));
-                $view->refresh("?m=editConfigurationFiles");
+                $view->refresh("?m=editConfigFiles");
                 
                 return;
             }
             
             echo '<h2>'.get_lang('editing_file').'</h2><p><b>'.htmlentities($file).'</b></p>';
-            echo '<form action="?m=editConfigurationFiles&p=modify&home_id='.$server_home['home_id'].'" method="POST">';
+            echo '<form action="?m=editConfigFiles&p=modify&home_id='.$server_home['home_id'].'" method="POST">';
             echo '<input type="hidden" name="file" value="'.rawurlencode($_GET['file']).'">';
             echo '<input type="hidden" name="action" value="save">';
             echo '<textarea name="file_content" style="width:98%;" rows="40">'. $data .'</textarea>';
             echo '<p><input type="submit" name="write" value="'. get_lang('save') . '" /></p>';
             echo '</form>';
-            echo '<table class="center" style="width:100%;""><a href="?m=editConfigurationFiles&home_id='. (int)$server_home['home_id'].'">'.get_lang('go_back').'</a></table>';
+            echo '<table class="center" style="width:100%;""><a href="?m=editConfigFiles&home_id='. (int)$server_home['home_id'].'">'.get_lang('go_back').'</a></table>';
         }
     } else {
         print_failure(get_lang('file_not_found'));
