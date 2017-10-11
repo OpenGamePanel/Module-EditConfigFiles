@@ -6,6 +6,10 @@ function getFilesInXML($files)
 
     if (isset($files->file)) {
         foreach ($files->file as $file) {
+            if (empty((string)$file)) {
+                continue;
+            }
+
             $values[] = array(
                 'name'            =>    (string)$file,
                 'description'    =>    $file['description'],

@@ -11,7 +11,7 @@ define('description', "Description");
 define('invalid_file', "The specified file may not be edited.");
 define('wrote_changes', "Successfully saved the file.");
 define('failed_write', "Failed to save the file.");
-define('file_not_found', "The file was not found.");
 define('failed_read', "Failed to read the file.");
 define('save', "Save");
 define('go_back', "Go Back");
+define('new_file', "New File");

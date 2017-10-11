@@ -66,50 +66,39 @@ function exec_ogp_module()
         
         return;
     }
-    
-    if ($remote->rfile_exists($server_home['home_path'] . '/' . $file) == 1) {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $file_info = $remote->remote_writefile($server_home['home_path'] . '/' . $file, strip_real_escape_string($_POST['file_content']));
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $file_info = $remote->remote_writefile($server_home['home_path'] . '/' . $file, strip_real_escape_string($_POST['file_content']));
             
-            if ($file_info === 1) {
-                print_success(get_lang('wrote_changes'));
-                $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
+        if ($file_info === 1) {
+            print_success(get_lang('wrote_changes'));
+            $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
                 
-                return;
-            } else {
-                print_failure(get_lang('failed_write'));
-                $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
-                
-                return;
-            }
+            return;
         } else {
-            $file_info = $remote->remote_readfile($server_home['home_path'] . '/' . $file, $data);
-        
-            if ($file_info === 0) {
-                print_failure(get_lang('file_not_found'));
-                $view->refresh("?m=editConfigFiles");
+            print_failure(get_lang('failed_write'));
+            $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
                 
-                return;
-            } elseif ($file_info === -2) {
-                print_failure(get_lang('failed_read'));
-                $view->refresh("?m=editConfigFiles");
-                
-                return;
-            }
-            
-            echo '<h2>'.get_lang('editing_file').'</h2><p><b>'.htmlentities($file).'</b></p>';
-            echo '<form action="?m=editConfigFiles&p=modify&home_id='.$server_home['home_id'].'" method="POST">';
-            echo '<input type="hidden" name="file" value="'.rawurlencode($_GET['file']).'">';
-            echo '<input type="hidden" name="action" value="save">';
-            echo '<textarea name="file_content" style="width:98%;" rows="40">'. $data .'</textarea>';
-            echo '<p><input type="submit" name="write" value="'. get_lang('save') . '" /></p>';
-            echo '</form>';
-            echo '<table class="center" style="width:100%;""><a href="?m=editConfigFiles&home_id='. (int)$server_home['home_id'].'">'.get_lang('go_back').'</a></table>';
+            return;
         }
     } else {
-        print_failure(get_lang('file_not_found'));
-        $view->refresh("?m=gamemanager&p=game_monitor");
-
-        return;
+        $newFile = ($remote->rfile_exists($server_home['home_path'] . '/' . $file) == 0 ? true : false);
+        $file_info = $remote->remote_readfile($server_home['home_path'] . '/' . $file, $data);
+        
+        if ($file_info !== 1) {
+            print_failure(get_lang('failed_read'));
+            $view->refresh("?m=editConfigFiles");
+                
+            return;
+        }
+            
+        echo '<h2>'.get_lang('editing_file').'</h2><p><b>'.($newFile ? get_lang('new_file').':' : '') .' '. htmlentities($file).'</b></p>';
+        echo '<form action="?m=editConfigFiles&p=modify&home_id='.$server_home['home_id'].'" method="POST">';
+        echo '<input type="hidden" name="file" value="'.rawurlencode($_GET['file']).'">';
+        echo '<input type="hidden" name="action" value="save">';
+        echo '<textarea name="file_content" style="width:98%;" rows="40">'. $data .'</textarea>';
+        echo '<p><input type="submit" name="write" value="'. get_lang('save') . '" /></p>';
+        echo '</form>';
+        echo '<div><a href="?m=editConfigFiles&home_id='. (int)$server_home['home_id'].'">'.get_lang('go_back').'</a></div>';
     }
 }

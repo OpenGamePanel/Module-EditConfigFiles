@@ -79,4 +79,11 @@ function exec_ogp_module()
         
         echo '</table>';
     }
+
+    $modKey = key($server_home['mods']);
+    $IpPorts = $db->getHomeIpPorts($home_id);
+    
+    echo '<div style="margin-top:12px">
+            <a href="?m=gamemanager&p=game_monitor&home_id-mod_id-ip-port='. $home_id .'-'. $server_home['mods'][$modKey]['mod_id'] .'-'. $IpPorts[0]['ip'] .'-'. $IpPorts[0]['port'] .'">'.get_lang('go_back').'</a>
+    </div>';
 }
