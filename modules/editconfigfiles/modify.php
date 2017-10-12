@@ -22,7 +22,7 @@
  *
  */
 
-require_once('modules/editConfigFiles/functions.php');
+require_once('modules/editconfigfiles/functions.php');
 require_once("modules/config_games/server_config_parser.php");
 require_once('includes/lib_remote.php');
 
@@ -53,7 +53,7 @@ function exec_ogp_module()
     
     if (array_search($file, array_column($files, 'path')) === false) {
         print_failure(get_lang('invalid_file'));
-        $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
+        $view->refresh("?m=editconfigfiles&home_id=". (int)$server_home['home_id']);
         
         return;
     }
@@ -72,12 +72,12 @@ function exec_ogp_module()
             
         if ($file_info === 1) {
             print_success(get_lang('wrote_changes'));
-            $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
+            $view->refresh("?m=editconfigfiles&home_id=". (int)$server_home['home_id']);
                 
             return;
         } else {
             print_failure(get_lang('failed_write'));
-            $view->refresh("?m=editConfigFiles&home_id=". (int)$server_home['home_id']);
+            $view->refresh("?m=editconfigfiles&home_id=". (int)$server_home['home_id']);
                 
             return;
         }
@@ -87,18 +87,18 @@ function exec_ogp_module()
         
         if ($file_info !== 1) {
             print_failure(get_lang('failed_read'));
-            $view->refresh("?m=editConfigFiles");
+            $view->refresh("?m=editconfigfiles");
                 
             return;
         }
             
         echo '<h2>'.get_lang('editing_file').'</h2><p><b>'.($newFile ? get_lang('new_file').':' : '') .' '. htmlentities($file).'</b></p>';
-        echo '<form action="?m=editConfigFiles&p=modify&home_id='.$server_home['home_id'].'" method="POST">';
+        echo '<form action="?m=editconfigfiles&p=modify&home_id='.$server_home['home_id'].'" method="POST">';
         echo '<input type="hidden" name="file" value="'.rawurlencode($_GET['file']).'">';
         echo '<input type="hidden" name="action" value="save">';
         echo '<textarea name="file_content" style="width:98%;" rows="40">'. $data .'</textarea>';
         echo '<p><input type="submit" name="write" value="'. get_lang('save') . '" /></p>';
         echo '</form>';
-        echo '<div><a href="?m=editConfigFiles&home_id='. (int)$server_home['home_id'].'">'.get_lang('go_back').'</a></div>';
+        echo '<div><a href="?m=editconfigfiles&home_id='. (int)$server_home['home_id'].'">'.get_lang('go_back').'</a></div>';
     }
 }
