@@ -1,17 +1,17 @@
 <?php
 
-define('configuration_files', "Configuration Files");
-define('editing_file', "Editing File");
+define('configuration_files', "ملفات التكوين");
+define('editing_file', "تعديل الملف");
 define('no_server_specfied', "No Server ID specified - can't list any configuration files.");
 define('no_home', "You don't have access to the given Server ID.");
-define('no_configs_for_game', "This has has no configuration files defined.");
-define('name', "Name");
-define('no_description', "No Description");
-define('description', "Description");
-define('invalid_file', "The specified file may not be edited.");
-define('wrote_changes', "Successfully saved the file.");
-define('failed_write', "Failed to save the file.");
-define('file_not_found', "The file was not found.");
-define('failed_read', "Failed to read the file.");
-define('save', "Save");
-define('go_back', "Go Back");
+define('no_configs_for_game', "لم يتم تحديد ملفات التكوين هذه.");
+define('name', "الاسم");
+define('no_description', "بدون وصف");
+define('description', "الوصف");
+define('invalid_file', "قد لا يتم تحرير الملف المحدد.");
+define('wrote_changes', "تم حفظ الملف بنجاح.");
+define('failed_write', "أخفق حفظ الملف.");
+define('failed_read', "أخفق قراءة الملف.");
+define('save', "حفظ");
+define('go_back', "رجوع");
+define('new_file', "New File");
