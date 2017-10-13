@@ -14,4 +14,4 @@ define('failed_write', "Echec lors de l'enregistrement du fichier.");
 define('failed_read', "Echec lors de la lecture du fichier.");
 define('save', "Enregistrer");
 define('go_back', "Retour");
-define('new_file', "New File");
+define('new_file', "Nouveau Fichier");

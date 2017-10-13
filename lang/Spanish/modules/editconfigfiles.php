@@ -1,17 +1,17 @@
 <?php
 
-define('configuration_files', "Configuration Files");
-define('editing_file', "Editing File");
-define('no_server_specfied', "No Server ID specified - can't list any configuration files.");
-define('no_home', "You don't have access to the given Server ID.");
-define('no_configs_for_game', "This has no configuration files defined.");
-define('name', "Name");
-define('no_description', "No Description");
-define('description', "Description");
-define('invalid_file', "The specified file may not be edited.");
-define('wrote_changes', "Successfully saved the file.");
-define('failed_write', "Failed to save the file.");
-define('failed_read', "Failed to read the file.");
-define('save', "Save");
-define('go_back', "Go Back");
-define('new_file', "New File");
+define('configuration_files', "Archivos de Configuración");
+define('editing_file', "Editando Archivo");
+define('no_server_specfied', "No se especificó ID de servidor: no se pueden listar los archivos de configuración.");
+define('no_home', "No tienes acceso a la ID del servidor dada.");
+define('no_configs_for_game', "Esto no tiene archivos de configuración definidos.");
+define('name', "Nombre");
+define('no_description', "No hay Descripción");
+define('description', "Descripción");
+define('invalid_file', "El archivo especificado no se puede editar.");
+define('wrote_changes', "Archivo guardado satisfactoriamente.");
+define('failed_write', "No se pudo guardar el archivo.");
+define('failed_read', "No se pudo leer el archivo.");
+define('save', "Guardar");
+define('go_back', "Volver Atrás");
+define('new_file', "Nuevo Archivo");
