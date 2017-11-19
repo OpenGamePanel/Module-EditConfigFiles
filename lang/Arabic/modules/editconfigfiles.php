@@ -2,7 +2,7 @@
 
 define('configuration_files', "ملفات التكوين");
 define('editing_file', "تعديل الملف");
-define('no_server_specfied', "No Server ID specified - can't list any configuration files.");
+define('no_server_specfied', "لا يوجد اي دي خادم محدد - لا يمكن سرد أية ملفات تكوين.");
 define('no_home', "ليس لديك حق الوصول إلى معرف الخادم المعين.");
 define('no_configs_for_game', "لم يتم تحديد ملفات التكوين هذه.");
 define('name', "الاسم");
