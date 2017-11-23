@@ -21,10 +21,11 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
  */
-
-require_once('modules/editconfigfiles/functions.php');
-require_once("modules/config_games/server_config_parser.php");
-require_once('includes/lib_remote.php');
+ 
+require 'modules/editconfigfiles/array_column.php';
+require 'modules/editconfigfiles/functions.php';
+require 'modules/config_games/server_config_parser.php';
+require 'includes/lib_remote.php';
 
 function exec_ogp_module()
 {
