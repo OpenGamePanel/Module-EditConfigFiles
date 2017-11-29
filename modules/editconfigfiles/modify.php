@@ -24,7 +24,7 @@
  
 require 'modules/editconfigfiles/array_column.php';
 require 'modules/editconfigfiles/functions.php';
-require 'modules/config_games/server_config_parser.php';
+require_once 'modules/config_games/server_config_parser.php';
 require 'includes/lib_remote.php';
 
 function exec_ogp_module()
