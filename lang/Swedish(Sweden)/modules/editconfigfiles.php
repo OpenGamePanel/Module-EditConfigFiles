@@ -1,17 +1,17 @@
 <?php
 
-define('configuration_files', "Configuration Files");
-define('editing_file', "Editing File");
-define('no_server_specfied', "No Server ID specified - can't list any configuration files.");
-define('no_home', "You don't have access to the given Server ID.");
-define('no_configs_for_game', "This has no configuration files defined.");
-define('name', "Name");
-define('no_description', "No Description");
-define('description', "Description");
-define('invalid_file', "The specified file may not be edited.");
-define('wrote_changes', "Successfully saved the file.");
-define('failed_write', "Failed to save the file.");
-define('failed_read', "Failed to read the file.");
-define('save', "Save");
-define('go_back', "Go Back");
-define('new_file', "New File");
+define('OGP_LANG_configuration_files', "Konfigurationsfiler ");
+define('OGP_LANG_editing_file', "Redigerar fil");
+define('OGP_LANG_no_server_specfied', "Inget server-ID anges - kan inte lista några konfigurationsfiler.");
+define('OGP_LANG_no_home', "Du har inte tillgång till det angivna Server-ID't. ");
+define('OGP_LANG_no_configs_for_game', "Det här har inga konfigurationsfiler definierade.");
+define('OGP_LANG_name', "Namn");
+define('OGP_LANG_no_description', "Ingen beskrivning");
+define('OGP_LANG_description', "Beskrivning");
+define('OGP_LANG_invalid_file', "Den specificerade filen får inte ändras. ");
+define('OGP_LANG_wrote_changes', "Filen sparades framgångsrikt. ");
+define('OGP_LANG_failed_write', "Misslyckades med att spara filen. ");
+define('OGP_LANG_failed_read', "Misslyckades med att läsa filen. ");
+define('OGP_LANG_save', "Spara");
+define('OGP_LANG_go_back', "Gå tillbaka");
+define('OGP_LANG_new_file', "Ny fil");
