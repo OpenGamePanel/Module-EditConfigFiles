@@ -6,7 +6,7 @@ function getFilesInXML($files)
 
     if (isset($files->file)) {
         foreach ($files->file as $file) {
-            if (empty((string)$file)) {
+            if ((string)$file == false) {
                 continue;
             }
 
