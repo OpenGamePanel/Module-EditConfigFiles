@@ -2,8 +2,8 @@
 
 define('OGP_LANG_configuration_files', "Konfigürsayon Dosyaları");
 define('OGP_LANG_editing_file', "Dosya Düzenleniyor");
-define('OGP_LANG_no_server_specfied', "No Server ID specified - can't list any configuration files.");
-define('OGP_LANG_no_home', "You don't have access to the given Server ID.");
+define('OGP_LANG_no_server_specfied', "Sunucu kimliği belirtilmedi - herhangi bir ayar dosyası listelenemedi.");
+define('OGP_LANG_no_home', "Verilen sunucu kimliğine erişiminiz bulunmuyor.");
 define('OGP_LANG_no_configs_for_game', "Bunun tanınlanmış konfigürasyon dosyası yok.");
 define('OGP_LANG_name', "Ad");
 define('OGP_LANG_no_description', "Açıklama Yok");

@@ -2,7 +2,7 @@
 
 define('OGP_LANG_configuration_files', "Pliki konfiguracyjne");
 define('OGP_LANG_editing_file', "Edycja pliku");
-define('OGP_LANG_no_server_specfied', "No Server ID specified - can't list any configuration files.");
+define('OGP_LANG_no_server_specfied', "Nie określono identyfikatora serwera - nie można wyświetlić żadnych plików konfiguracyjnych.");
 define('OGP_LANG_no_home', "Nie masz dostępu do serwera ID");
 define('OGP_LANG_no_configs_for_game', "Nie zdefiniowano plików konfiguracyjnych.");
 define('OGP_LANG_name', "Nazwa");
