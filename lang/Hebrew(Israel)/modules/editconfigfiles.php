@@ -1,10 +1,10 @@
 <?php
 
-define('OGP_LANG_configuration_files', "קבצי תצורה");
+define('OGP_LANG_configuration_files', "קבצי הגדרות");
 define('OGP_LANG_editing_file', "עריכת קבצים");
-define('OGP_LANG_no_server_specfied', "לא צוין מזהה שרת - לא ניתן לרשום קבצי תצורה.");
+define('OGP_LANG_no_server_specfied', "לא צוין מזהה שרת - לא ניתן לרשום קבצי הגדרות.");
 define('OGP_LANG_no_home', "אין לך גישה למזהה השרת הנתון.");
-define('OGP_LANG_no_configs_for_game', "אין להגדרת קבצי תצורה זו.");
+define('OGP_LANG_no_configs_for_game', "לא הוגדרו קבצי הגדרה");
 define('OGP_LANG_name', "שם");
 define('OGP_LANG_no_description', "אין תיאור");
 define('OGP_LANG_description', "תיאור");
