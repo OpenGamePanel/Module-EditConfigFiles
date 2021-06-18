@@ -1,10 +1,10 @@
 <?php
 
-define('OGP_LANG_configuration_files', "Configuration Files");
-define('OGP_LANG_editing_file', "Editing File");
-define('OGP_LANG_no_server_specfied', "No Server ID specified - can't list any configuration files.");
-define('OGP_LANG_no_home', "You don't have access to the given Server ID.");
-define('OGP_LANG_no_configs_for_game', "This has no configuration files defined.");
+define('OGP_LANG_configuration_files', "Fișiere de configurare");
+define('OGP_LANG_editing_file', "Editarea fișierului");
+define('OGP_LANG_no_server_specfied', "Nu este specificat niciun ID de server - nu poate lista niciun fișier de configurare.");
+define('OGP_LANG_no_home', "Nu aveți acces la ID-ul serverului dat.");
+define('OGP_LANG_no_configs_for_game', "Aceasta nu are fișiere de configurare definite.");
 define('OGP_LANG_name', "Name");
 define('OGP_LANG_no_description', "No Description");
 define('OGP_LANG_description', "Description");
